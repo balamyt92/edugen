@@ -11,6 +11,14 @@
 |
 */
 
+use App\Http\Controllers\IndexController;
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home', ['text' => session('text')]);
 });
+
+Route::post('/save-text', [IndexController::class, 'saveText'])
+    ->name('save-text');
+
+Route::post('/create-job', [IndexController::class, 'createJob'])
+    ->name('create-job');
