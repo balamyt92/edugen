@@ -10,9 +10,7 @@ class IndexController extends Controller
 {
     public function createJob(Request $request)
     {
-        dump($request->get('types'));
-        dump($request->get('counts'));
-        die;
+        return view('test');
     }
 
     public function saveText(Request $request)

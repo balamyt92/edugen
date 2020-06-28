@@ -22,3 +22,6 @@ Route::post('/save-text', [IndexController::class, 'saveText'])
 
 Route::post('/create-job', [IndexController::class, 'createJob'])
     ->name('create-job');
+
+Route::post('/test-check', [IndexController::class, 'createJob'])
+    ->name('test-check');
